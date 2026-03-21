@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Generator - Alpha Research</title>
+
+<style>
+body { font-family: Arial; max-width: 900px; margin: auto; padding: 20px; }
+input, textarea { width: 100%; margin: 10px 0; padding: 10px; }
+button { padding: 10px 20px; cursor: pointer; }
+.preview { background: #f4f4f4; padding: 20px; margin-top: 20px; white-space: pre-wrap; }
+</style>
+</head>
+
+<body>
+
+<h1>📊 Company Report Generator</h1>
+
+<input id="title" placeholder="Report Title">
+<input id="company" placeholder="Company Name">
+<textarea id="summary" placeholder="Executive Summary"></textarea>
+
+<h3>Key Metrics</h3>
+<input id="revenue" placeholder="Revenue">
+<input id="profit" placeholder="Net Profit">
+<input id="roe" placeholder="ROE">
+
+<h3>Valuation</h3>
+<input id="pe" placeholder="P/E Ratio">
+<input id="target" placeholder="Target Price">
+
+<h3>Risks</h3>
+<textarea id="risks" placeholder="Risk Factors (comma separated)"></textarea>
+
+<button onclick="generateReport()">Generate Report</button>
+<button onclick="downloadHTML()">Download HTML</button>
+
+<div class="preview" id="output"></div>
+
+<script>
+let generatedHTML = "";
+
+function generateReport() {
+    const title = document.getElementById("title").value;
+    const company = document.getElementById("company").value;
+    const summary = document.getElementById("summary").value;
+    const revenue = document.getElementById("revenue").value;
+    const profit = document.getElementById("profit").value;
+    const roe = document.getElementById("roe").value;
+    const pe = document.getElementById("pe").value;
+    const target = document.getElementById("target").value;
+    const risks = document.getElementById("risks").value.split(",");
+
+    generatedHTML = `
+<!DOCTYPE html>
+<html>
+<head>
+<title>${title}</title>
+<style>
+body { font-family: Arial; max-width: 900px; margin: auto; padding: 20px; }
+.highlight { background: #fff3cd; padding: 10px; }
+</style>
+</head>
+<body>
+
+<a href="index.html">← Back</a>
+
+<h1>${title}</h1>
+
+<h2>Executive Summary</h2>
+<p>${summary}</p>
+
+<h2>Company Overview</h2>
+<p>${company}</p>
+
+<h2>Key Metrics</h2>
+<div class="highlight">
+Revenue: ${revenue} <br>
+Profit: ${profit} <br>
+ROE: ${roe}
+</div>
+
+<h2>Valuation</h2>
+<p>P/E: ${pe}</p>
+
+<div class="highlight">
+Target Price: ${target}
+</div>
+
+<h2>Risks</h2>
+<ul>
+${risks.map(r => `<li>${r.trim()}</li>`).join("")}
+</ul>
+
+</body>
+</html>
+`;
+
+    document.getElementById("output").textContent = generatedHTML;
+}
+
+function downloadHTML() {
+    const blob = new Blob([generatedHTML], { type: "text/html" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "report.html";
+    a.click();
+}
+</script>
+
+</body>
+</html>
