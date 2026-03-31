@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Allow all content
+Allow: /
+
+# Sitemap location
+Sitemap: https://hari3093.github.io/Brown-Eye-Research/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
