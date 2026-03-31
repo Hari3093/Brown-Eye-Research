@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Archive | Alpha Research</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icon">α</span>
+                <div class="logo-text">
+                    <span class="logo-alpha">ALPHA</span>
+                    <span class="logo-research">RESEARCH</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="archive.html">Reports</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#subscribe" class="cta-button">Subscribe</a>
+        </nav>
+    </header>
+
+    <!-- Archive Section -->
+    <section class="archive-section">
+        <div class="container">
+            <h1 class="section-title">Research Archive</h1>
+            <p class="section-subtitle">Explore our comprehensive library of equity research and market analysis</p>
+
+            <!-- Filters -->
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterReports('all')">All Reports</button>
+                <button class="filter-btn" onclick="filterReports('companies')">Companies</button>
+                <button class="filter-btn" onclick="filterReports('sectors')">Sectors</button>
+                <button class="filter-btn" onclick="filterReports('premium')">Premium</button>
+            </div>
+
+            <!-- Reports Grid -->
+            <div class="reports-grid">
+                <div class="report-card" data-category="companies">
+                    <div class="report-badge">Premium Report</div>
+                    <div class="report-content">
+                        <h3>Britannia Industries - Company Profile</h3>
+                        <div class="report-meta">
+                            <span>📅 Feb 15, 2026</span>
+                            <span>⏱️ 7 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            Comprehensive analysis of India's leading biscuit manufacturer with 90% market share. Strong financials with 65.69% ROE, expanding dairy business.
+                        </p>
+                        <a href="../reports/companies/britannia-industries.html" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+
+                <div class="report-card" data-category="sectors">
+                    <div class="report-badge">Sector Analysis</div>
+                    <div class="report-content">
+                        <h3>Tech Sector Q1 2026 Outlook</h3>
+                        <div class="report-meta">
+                            <span>📅 Feb 10, 2026</span>
+                            <span>⏱️ 45 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            Comprehensive analysis of leading tech companies with AI exposure. Deep dive into revenue models and competitive positioning.
+                        </p>
+                        <a href="#" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+
+                <div class="report-card" data-category="sectors">
+                    <div class="report-badge">Sector Analysis</div>
+                    <div class="report-content">
+                        <h3>Renewable Energy: Growth Opportunities</h3>
+                        <div class="report-meta">
+                            <span>📅 Feb 8, 2026</span>
+                            <span>⏱️ 38 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            Investment thesis for renewable energy stocks amid global climate initiatives. Detailed financial analysis for key players.
+                        </p>
+                        <a href="#" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+
+                <div class="report-card" data-category="companies">
+                    <div class="report-badge">Premium Report</div>
+                    <div class="report-content">
+                        <h3>TCS - Technology Powerhouse</h3>
+                        <div class="report-meta">
+                            <span>📅 Mar 20, 2026</span>
+                            <span>⏱️ 12 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            Deep dive into Tata Consultancy Services - India's largest IT company. Analysis of digital transformation opportunities.
+                        </p>
+                        <a href="../TCSReport.html" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+
+                <div class="report-card" data-category="sectors">
+                    <div class="report-badge">Market Update</div>
+                    <div class="report-content">
+                        <h3>Healthcare Innovation Leaders</h3>
+                        <div class="report-meta">
+                            <span>📅 Feb 5, 2026</span>
+                            <span>⏱️ 52 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            In-depth review of biotech and pharmaceutical companies with breakthrough pipeline products.
+                        </p>
+                        <a href="#" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+
+                <div class="report-card" data-category="premium">
+                    <div class="report-badge">Premium Report</div>
+                    <div class="report-content">
+                        <h3>Financial Services Sector Review</h3>
+                        <div class="report-meta">
+                            <span>📅 Jan 31, 2026</span>
+                            <span>⏱️ 41 min read</span>
+                        </div>
+                        <p class="report-preview">
+                            Analysis of banking, insurance, and fintech opportunities. Credit quality assessment and interest rate sensitivity.
+                        </p>
+                        <a href="#" class="read-more">Read Full Report →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Research</h4>
+                <ul>
+                    <li><a href="archive.html">All Reports</a></li>
+                    <li><a href="#">Companies</a></li>
+                    <li><a href="#">Sectors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="../tools/">Tools</a></li>
+                    <li><a href="#">Glossary</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Alpha Research. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function filterReports(category) {
+            const cards = document.querySelectorAll('.report-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
