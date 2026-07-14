@@ -164,33 +164,6 @@
     opacity: 0.9;
 }
 
-/* Recommendation */
-.recommendation {
-    background: #f8fafc;
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 4px solid #3b82f6;
-}
-
-.recommendation-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    border: 2px solid #e2e8f0;
-    text-align: center;
-}
-
-.recommendation-box h3 {
-    font-size: 2rem;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
-}
-
-.recommendation-box p {
-    color: #4b5563;
-    font-size: 1.05rem;
-}
-
 /* Related Reports */
 .related-reports {
     display: grid;
