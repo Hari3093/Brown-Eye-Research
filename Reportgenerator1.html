@@ -27,8 +27,7 @@ button { padding: 10px 20px; cursor: pointer; }
 <input id="roe" placeholder="ROE">
 
 <h3>Valuation</h3>
-<input id="pe" placeholder="P/E Ratio">
-<input id="target" placeholder="Valuation Estimate">
+<textarea id="valuation" placeholder="Valuation Notes"></textarea>
 
 <h3>Risks</h3>
 <textarea id="risks" placeholder="Risk Factors (comma separated)"></textarea>
@@ -48,8 +47,7 @@ function generateReport() {
     const revenue = document.getElementById("revenue").value;
     const profit = document.getElementById("profit").value;
     const roe = document.getElementById("roe").value;
-    const pe = document.getElementById("pe").value;
-    const target = document.getElementById("target").value;
+    const valuation = document.getElementById("valuation").value;
     const risks = document.getElementById("risks").value.split(",");
 
     generatedHTML = `
@@ -82,11 +80,7 @@ ROE: ${roe}
 </div>
 
 <h2>Valuation</h2>
-<p>P/E: ${pe}</p>
-
-<div class="highlight">
-Valuation Estimate: ${target}
-</div>
+<p>${valuation}</p>
 
 <h2>Risks</h2>
 <ul>
